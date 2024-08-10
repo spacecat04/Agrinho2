@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@300&display=swap');
+
+
+:root {
+    --cor-fundo: black; 
+    --cor-texto: white; 
+    --cor-destaque: white; 
+    --menu-ativo: black; 
+    --menu-fundo: white; 
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+.cabeçalho-principal {
+    background-image: url('./IMG/background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.barra-de-navegacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo img {
+    height: 130px;
+    width: 170px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: transparent;
+}
+
+.menu a.ativo {
+    background-color: var(--menu-fundo);
+    color: var(--menu-ativo);
+}
+
+.conteudo-cabeçalho {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+
+.conteudo-cabeçalho h1 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 300;
+    font-size: 73px;
+    margin: 0;
+    line-height: 1.2;
+    color: var(--cor-texto); /* Texto branco */
+}
+
+.secao-conteudo {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    padding: 50px;
+    text-align: left;
+}
+
+.secao-conteudo h1 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 300;
+    font-size: 73px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.conteudo p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0;
+    flex: 1;
+    word-break: break-word;
+}
+
+.conteudo img {
+    max-width: 600px;
+    height: auto;
+    flex: 1;
+}
+
+.secao-sobre {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    padding: 50px;
+    text-align: left;
+}
+
+.secao-sobre h1 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 300;
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+.secao-sobre p,
+.secao-sobre ul {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.secao-sobre ul {
+    padding-left: 20px;
+}
+
+.secao-sobre ul li {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1024px) {
+    .conteudo-cabeçalho h1 {
+        font-size: 60px;
+    }
+
+    .secao-conteudo h1 {
+        font-size: 60px;
+    }
+
+    .conteudo img {
+        max-width: 500px;
+    }
+
+    .secao-sobre h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .barra-de-navegacao {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu a {
+        margin: 10px 0;
+        width: 80%;
+        text-align: center;
+    }
+
+    .conteudo-cabeçalho {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .conteudo-cabeçalho h1 {
+        font-size: 50px;
+    }
+
+    .conteudo-cabeçalho p {
+        font-size: 14px;
+    }
+
+    .secao-conteudo {
+        padding: 30px;
+    }
+
+    .secao-conteudo h1 {
+        font-size: 50px;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .conteudo p, .conteudo img {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .conteudo img {
+        margin-top: 20px;
+    }
+
+    .secao-sobre {
+        padding: 30px;
+    }
+
+    .secao-sobre h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .conteudo-cabeçalho h1 {
+        font-size: 40px;
+    }
+
+    .conteudo-cabeçalho p {
+        font-size: 12px;
+    }
+
+    .secao-conteudo h1 {
+        font-size: 40px;
+    }
+
+    .conteudo p {
+        font-size: 14px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .secao-sobre h1 {
+        font-size: 30px;
+    }
+
+    .secao-sobre p,
+    .secao-sobre ul {
+        font-size: 16px;
+    }
+}
